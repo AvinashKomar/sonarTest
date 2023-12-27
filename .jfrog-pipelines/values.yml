@@ -1,0 +1,12 @@
+taskName: code_analysis
+primaryResource: code_analysis_km
+secondaryResource: code_analysis_publish_km
+gitProvider: git
+artifactory: art
+repoPath: AvinashKomar/sonarTest
+mainBranch: master
+protocol: https
+buildOnCommit: true
+pipelineName: test_code_analysis_km
+publishOnCommit: false
+publishTaskName: sonar-code-analysis_km
