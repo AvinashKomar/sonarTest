@@ -5,9 +5,9 @@ resources:
     type: GitRepo
     configuration:
       path: {{ .Values.repoPath }}
-      gitProvider: {{ .Values.gitProvider }}
+      gitProvider: github
       branches:
-        include: ^{{ .Values.mainBranch }}$
+        include: main
       cloneProtocol: {{ .Values.protocol }}
       buildOn:
         commit: {{ .Values.buildOnCommit }}
