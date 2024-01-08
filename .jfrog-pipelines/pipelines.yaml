@@ -25,10 +25,10 @@ resources:
     configuration:
       integration: sonar_int
       
-  # - name: git_sonar_km_2
-  #   type: CodeAnalysis
-  #   configuration:
-  #     integration: sonar_int     
+  - name: git_sonar_km_2
+    type: CodeAnalysis
+    configuration:
+      integration: sonar_int     
 
   # - name: git_sonar_staging
   #   type: CodeAnalysis
@@ -199,6 +199,7 @@ pipelines:
         configuration:
           outputResources:
             - name: git_sonar_km_1
+            - name: git_sonar_km_2
             
         execution:
           onExecute:
