@@ -1,39 +1,39 @@
 valuesFilePath: ./values.yml
 
 resources:
-  - name: {{ .Values.primaryResource }}
-    type: GitRepo
-    configuration:
-      path: {{ .Values.repoPath }}
-      gitProvider: {{ .Values.gitProvider }}
-      branches:
-        include: ^{{ .Values.mainBranch }}$
-      cloneProtocol: {{ .Values.protocol }}
-      buildOn:
-        commit: {{ .Values.buildOnCommit }}
+  # - name: {{ .Values.primaryResource }}
+  #   type: GitRepo
+  #   configuration:
+  #     path: {{ .Values.repoPath }}
+  #     gitProvider: {{ .Values.gitProvider }}
+  #     branches:
+  #       include: ^{{ .Values.mainBranch }}$
+  #     cloneProtocol: {{ .Values.protocol }}
+  #     buildOn:
+  #       commit: {{ .Values.buildOnCommit }}
 
-  - name: sonar_repo_km_21
-    type: GitRepo
-    configuration:
-      path: {{ .Values.repoPath }}
-      gitProvider: {{ .Values.gitProvider }}
-      branches:
-        include: master
+  # - name: sonar_repo_km_21
+  #   type: GitRepo
+  #   configuration:
+  #     path: {{ .Values.repoPath }}
+  #     gitProvider: {{ .Values.gitProvider }}
+  #     branches:
+  #       include: master
 
   - name: git_sonar_km_1
     type: CodeAnalysis
     configuration:
       integration: sonar_int
       
-  - name: git_sonar_km_2
-    type: CodeAnalysis
-    configuration:
-      integration: sonar_int     
+  # - name: git_sonar_km_2
+  #   type: CodeAnalysis
+  #   configuration:
+  #     integration: sonar_int     
 
-  - name: git_sonar_staging
-    type: CodeAnalysis
-    configuration:
-      integration: sonar_staging_int
+  # - name: git_sonar_staging
+  #   type: CodeAnalysis
+  #   configuration:
+  #     integration: sonar_staging_int
       
 pipelines:
   - name: {{ .Values.pipelineName }}
@@ -205,7 +205,7 @@ pipelines:
         configuration:
           outputResources:
             - name: git_sonar_km_1
-            - name: git_sonar_km_2
+            
         execution:
           onExecute:
             - write_output git_sonar_km_1 "coverage=$coverage"
