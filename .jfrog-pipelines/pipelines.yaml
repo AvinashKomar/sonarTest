@@ -203,21 +203,21 @@ pipelines:
             
         execution:
           onExecute:
-            - write_output git_sonar_km_1 "coverage=$coverage"
+            - write_output git_sonar_km_1 "coverage=58"
             - write_output git_sonar_km_1 "bugs=2"
             - write_output git_sonar_km_1 "code_smells=4"
             - write_output git_sonar_km_1 "duplicated_lines=10"
-            - write_output git_sonar_km_1 "tests=3"
+            - write_output git_sonar_km_1 "tests=8"
             - write_output git_sonar_km_1 "duplicated_blocks=0"
             - write_output git_sonar_km_1 "ncloc=4000"
             - write_output git_sonar_km_1 "vulnerabilities=2"
             - write_output git_sonar_km_1 "security_hotspots=1"
             # coverage 2
-            - write_output git_sonar_km_2 "coverage=$((coverage-5))"
+            - write_output git_sonar_km_2 "coverage=55"
             - write_output git_sonar_km_2 "bugs=5"
             - write_output git_sonar_km_2 "code_smells=12"
             - write_output git_sonar_km_2 "duplicated_lines=100"
-            - write_output git_sonar_km_2 "tests=3"
+            - write_output git_sonar_km_2 "tests=7"
             - write_output git_sonar_km_2 "duplicated_blocks=0"
             - write_output git_sonar_km_2 "ncloc=4000"
             - write_output git_sonar_km_2 "vulnerabilities=22"
