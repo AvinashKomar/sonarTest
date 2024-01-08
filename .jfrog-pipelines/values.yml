@@ -1,7 +1,7 @@
 taskName: code_analysis
 primaryResource: code_analysis_km
 secondaryResource: code_analysis_publish_km
-gitProvider: git
+gitProvider: github
 artifactory: art
 repoPath: AvinashKomar/sonarTest
 mainBranch: master
