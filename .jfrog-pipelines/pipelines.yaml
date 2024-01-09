@@ -4,7 +4,7 @@ resources:
   - name: cron_trigger
     type: CronTrigger
     configuration:
-      interval: '*/5 * * * * ?' 
+      interval: '*/5 * * * *' 
   # - name: {{ .Values.primaryResource }}
   #   type: GitRepo
   #   configuration:
