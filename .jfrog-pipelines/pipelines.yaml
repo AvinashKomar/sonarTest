@@ -201,6 +201,8 @@ pipelines:
       - name: test_{{.Values.taskName }}
         type: Bash
         configuration:
+          inputResources:
+            - name: cron_trigger
           outputResources:
             - name: git_sonar_km_1
             - name: git_sonar_km_2
